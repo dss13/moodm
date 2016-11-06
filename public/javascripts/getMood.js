@@ -20,7 +20,7 @@ var submitPressed = function() {
 	}, 300);
 	var search = $("#search").val();
 	$.post( "/", { search: search }, function(data) {
-		$("#result").html('This song belongs to ' + data + ' genre.');
+		$("#result").html('The emotion in the song is ' + data );
 		clearInterval(loading);
 	} );
 }
