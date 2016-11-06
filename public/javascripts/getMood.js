@@ -20,7 +20,12 @@ var submitPressed = function() {
 	}, 300);
 	var search = $("#search").val();
 	$.post( "/", { search: search }, function(data) {
-		$("#result").html('The emotion in the song is ' + data );
+		if(data == 'No match found'){
+			$("#result").html(data + '. We will fix this soon');
+		}
+		else{
+			$("#result").html('The emotion in the song is ' + data );
+		}
 		clearInterval(loading);
 	} );
 }
