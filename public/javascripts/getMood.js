@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	alert('Type in a song name. We will try to determine its genre from its chord sequence.')
+	alert('Type in a song name. We will try to determine the emotion from its chord sequence.')
 	$("#submit").click(submitPressed);
 	$(document).keypress(function(e){
 	    if (e.which == 13){
